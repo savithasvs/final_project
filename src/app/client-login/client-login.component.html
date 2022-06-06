@@ -1,0 +1,77 @@
+<!-- <h1><span>Restaurant</span> Management</h1> -->
+<div class="bg-img">
+    <div class="container1">
+        <!-- <div class="container">
+        <img class="img-responsive" src="assets/dashboard.jpg">
+    </div> -->
+        <div class="panel-body">
+            <h2 id="topic">Login Form</h2>
+            <form [formGroup]="clientFormGroup" (ngSubmit)="find(this.clientFormGroup.value)">
+                <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                    <label for="email">Email:</label>
+                    <input id="email" type="text" class="form-control" formControlName="email"
+                        placeholder="Enter Your Email" required />
+                    <div class="help-block text-danger" *ngIf="email.touched">
+                        <span *ngIf="email.errors?.required">
+                            User Name is Required
+                        </span>
+                        <span *ngIf="email.errors?.minlength">
+                            User Name must contain minimum 5 characters
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" class="form-control" formControlName="pass"
+                            placeholder="Enter Your Password" required />
+                            <span
+                            class="text-danger"
+                            *ngIf="
+                            clientFormGroup.controls['pass'].touched &&
+                            clientFormGroup.hasError('required', 'pass')
+                            "
+                            >*Confirm Password is required!!</span>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <!-- <button id="butt" class="butt" type="submit"
+                       >Login</button> -->
+                <div class="login">
+                   
+                    <!-- <input class="login1" type="submit" value="login" (click)="click()"> -->
+                    <input class="login1" type="submit" value="login"  >
+                </div>
+                <!-- </div> -->
+            </form>
+        </div>
+        <!-- <div>
+            Already have an account?
+             <a class="text-danger" routerLink="signup">Login</a> -->
+            <!-- <div class="text-danger">
+                <button class="btn" (click)="click()">Home</button>
+            </div>
+        </div>  -->
+        <!-- <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Confirm Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let character of array[0]">
+                        <td>{{ character.firstName }}</td>
+                        <td>{{ character.lastName }}</td>
+                        <td>{{ character.email }}</td>
+                        <td>{{ character.Password }}</td>
+                        <td>{{ character.reenter }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->

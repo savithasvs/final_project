@@ -1,0 +1,33 @@
+.restaurantgif{
+    margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: 50%;
+}
+.Resort{
+    margin-top: 90px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 65%;
+    height: 50%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
